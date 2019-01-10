@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -16,17 +11,139 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin: 0;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container {
+  width: 100%;
+  height: 90%;
+  flex-direction: column;
+  background-image: url("corkboard.jpg");
+  background-size: cover;
+}
+
+.navbar {
+  height: 10vh;
+  width: 100%;
+}
+
+.display {
+  float: right;
+  flex-direction: column;
+  min-height: 80vh;
+  overflow-x: wrap;
+  width: 100%;
+  margin: 0;
+  columns: 4;
+}
+
+.list {
+  font-size: 125%;
+  width: 15%;
+  height: 100%;
+  flex-flow: column;
+  display: inline-flex;
+  margin: 0% 2.5%;
+}
+
+.list button {
+  float: left;
+  width: 100%;
+  height: 50%;
+  padding: 1% 5%;
+  margin: 2px 2%;
+}
+
+.note-box {
+  height: 15em;
+  Max-Width: 90%;
+  margin: 5%;
+  background-image: url("post-it-notes.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 5% 0%;
+  justify-content: center;
+}
+
+.note-box button {
+  background: transparent;
+  height: 10vh;
+}
+
+.note-title {
+  font-weight: 900;
+  height:50%;
+  width: 75%;
+  margin: 10% 5% 0% 5%;
+}
+
+.note-detail {
+  font-style: italic;
+  width: 75%;
+  height: 100%;
+  margin: 0% 5%
+}
+
+div {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.menu {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+.menu-item {
+  cursor: pointer;
+  padding: 5px;
+  height: 28px;
+  border-bottom: 1px solid rgb(187, 187, 187);
+}
+.menu-item:hover {
+  color: #2980b9;
+}
+
+@media (max-device-width : 599px)
+{
+}
+@media (min-device-width : 600px) and (max-device-width: 899px)
+{
+  .display, .navbar
+  {
+    font-size: 2vw;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-device-width : 1200px) and (max-device-width: 1799px)
+{
+  /* html {
+    font-size: 125%;
+  } */
+  .display, .navbar
+  {
+    padding-top: 0%;
+    font-size: 1.5vw;
+  }
+}
+
+@media (min-device-width : 1800px)
+{
+  .display, .navbar
+  {
+    font-size: 2vw;
   }
 }
